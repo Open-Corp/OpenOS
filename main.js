@@ -43,3 +43,6 @@ menu('changelog');
 
 const dlBtn = document.querySelector(".dl-btn");
 dlBtn.href = `os-dl/OpenOS-${version}.zip`;
+
+const verP = document.querySelector(".ver");
+verP.innerHTML = "Version " + version;
