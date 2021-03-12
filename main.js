@@ -1,13 +1,30 @@
 const version = "0.0.1z";
 
+list =
+[
+"Création du systeme.",
+"Ajout du systeme de fenêtre.",
+"Ajout du systeme d'identifiant de fenêtre.",
+"Création du logo de chargement du site."
+]
+
+
 function menu(menuName) {
   const menuBar = document.querySelector(".section2");
   if (menuName === "changelog") {
+    let news;
+    for (let i = 0; i !== list.length; i++) {
+      if (news === undefined) news = "<li>" + list[i] + "</li>\n";
+      else news += "<li>" + list[i] + "</li>\n";
+    }
+
     menuBar.innerHTML = `
     <h1>Journal des modifications.</h1>
     <hr>
     <ul>
-
+      ` +
+      news
+      + `
     </ul>
     `
   }
@@ -41,8 +58,8 @@ function menu(menuName) {
 }
 menu('changelog');
 
-const dlBtn = document.querySelector(".dl-btn");
-dlBtn.href = `os-dl/OpenOS-${version}.zip`;
-
 const verP = document.querySelector(".ver");
 verP.innerHTML = "Version " + version;
+
+const dlBtn = document.querySelector(".dl-btn");
+dlBtn.href = `os-dl/OpenOS-${version}.zip`;
