@@ -7,14 +7,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: copy os.js file
-      uses: canastro/copy-file-action@master
-      with:
-        source: "/OS/os.js"
-        target: "/open-site/os-dl/os.js"
-        
-    - name: copy os.js file
-      uses: canastro/copy-file-action@master
-      with:
-        source: "/OS/OpenOS.html"
-        target: "/open-site/os-dl/OpenOS.html"
+    - name: show directory
+    - run: ls
