@@ -1,11 +1,14 @@
-name: copy files
-on: [push]
-jobs:
-
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - name: show directory
-      uses: actions/checkout@master
-    - run: ls
+on:
+  push:
+    branches:
+    - OS
+    - open-site
+    jobs:
+      test:
+        name: Go to the virtual machine
+        runs-on: ubuntu-18.04
+          steps:
+          - name: do cd
+            run: cd ..
+          - name:
+            run: ls
