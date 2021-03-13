@@ -4,7 +4,5 @@ jobs:
     name: deploy the vm
     runs-on: ubuntu-18.04
     steps:
-    - name: do cd
-      run: cd ..
-    - name: do ls
-      run: ls
+    - name: test git
+      run: git
