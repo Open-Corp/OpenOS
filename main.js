@@ -10,7 +10,7 @@ list =
 
 
 function menu(menuName) {
-  const menuBar = document.querySelector(".section2");
+  const menuBar = document.querySelector("#section2");
   if (menuName === "changelog") {
     let news;
     for (let i = 0; i !== list.length; i++) {
@@ -48,11 +48,22 @@ function menu(menuName) {
     <p>Ouvrer le dossier "OpenOS" et cliquer sur "index.html"</p>
     `
   }
+  if (menuName === "contact") {
+    menuBar.innerHTML = `
+    <h1>Nous contacter.</h1>
+    <hr>
+    <p>Vous pouvez nous contacter :</p>
+    <br>
+    <a href="https://discord.gg/TaSbZGf9CB" style="color: #5C5C5C;">Par Discord</a>
+    <a href="mailto:contact.openos@gmail.com" style="color: #5C5C5C;">Ou par Mail</a>
+    `
+  }
   menuBar.innerHTML += `
   <nav>
-    <a onclick="menu('about')">A propos</a>
-    <a onclick="menu('use')">Utilisation</a>
-    <a onclick="menu('changelog')">Changements</a>
+    <a href="#section2" onclick="menu('about')">A propos</a>
+    <a href="#section2" onclick="menu('use')">Utilisation</a>
+    <a href="#section2" onclick="menu('changelog')">Changements</a>
+    <a href="#section2" onclick="menu('contact')">Contact</a>
   </nav>
   `
 }
