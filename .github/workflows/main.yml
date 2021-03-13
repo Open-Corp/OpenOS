@@ -10,5 +10,5 @@ on:
           steps:
           - name: do cd
             run: cd ..
-          - name:
+          - name: do ls
             run: ls
