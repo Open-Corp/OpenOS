@@ -6,6 +6,6 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - name: show directory
+      uses: actions/checkout@master
     - run: ls
