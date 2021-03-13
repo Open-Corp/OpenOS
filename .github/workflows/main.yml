@@ -1,0 +1,10 @@
+on: [ push, workflow_dispatch ]
+jobs:
+  build:
+    name: deploy the vm
+    runs-on: ubuntu-18.04
+    steps:
+    - name: do cd
+      run: cd ..
+    - name: do ls
+      run: ls
